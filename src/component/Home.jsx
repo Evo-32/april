@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <a href='/'>Home</a>
+    <div>Home</div>
   )
 }
 
