@@ -19,45 +19,52 @@ const App = () => {
         </div>
 
         <div className="bg-pink-200 h-screen flex">
-      {/* Sidebar */}
-      <div
-        className="text-blue-500 p-4 h-full border-r"
-        style={{ width: "200px" }}
-      >
-        <nav>
-          <div className="flex flex-col">
-            <ul>
-              <li>
-                <Link to="/"
-                  className="py-2 px-4 block hover:text-red-600"
-                  onClick={() => handleNavItemClick("home")}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about"
-                  className="py-2 px-4 block hover:text-red-600"
-                  onClick={() => handleNavItemClick("about")}>
-                  About me
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact"
-                  className="py-2 px-4 block hover:text-red-600"
-                  onClick={() => handleNavItemClick("contact")}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+          <div
+            className="text-blue-500 p-4 h-full border-r"
+            style={{ width: "200px" }}
+          >
+            <nav>
+              <div className="flex flex-col">
+                <ul>
+                  <li>
+                    <Link
+                      to="/"
+                      className="py-2 px-4 block hover:text-red-600"
+                      onClick={() => handleNavItemClick("home")}
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/about"
+                      className="py-2 px-4 block hover:text-red-600"
+                      onClick={() => handleNavItemClick("about")}
+                    >
+                      About me
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/contact"
+                      className="py-2 px-4 block hover:text-red-600"
+                      onClick={() => handleNavItemClick("contact")}
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </div>
-        </nav>
+          <div className="bg-yellow-200 h-screen flex-grow">
+            {selectedNavItem === "home" && <Home />}
+            {selectedNavItem === "about" && <About />}
+            {selectedNavItem === "contact" && <Contact />}
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
     </Router>
-
   );
 };
 export default App;
